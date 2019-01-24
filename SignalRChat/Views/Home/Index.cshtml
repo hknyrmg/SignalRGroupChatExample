@@ -1,0 +1,52 @@
+﻿@using SignalRChat.viewModel
+
+
+@model GroupUser
+
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<style>
+    .right {
+        color: blueviolet
+    }
+</style>
+<title class="alert-danger">@Model.groupName</title>
+<div class="row">
+    <div class="col-6">&nbsp;</div>
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+
+            <form class="form-inline">
+                <div class="input-prepend input-append">
+                    <input type="text"  name="group-message" id="group-message-text" placeholder="Type a message" />
+                    <input type="button" id="groupmsg" class="btn" value="Send to Group" />
+                    <input type="button" id="leave-group" class="btn" value="Leave Group" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+<script src="~/lib/aspnet/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/groupChat.js"></script>
+<script type="text/javascript">
+    var userName = '@Model.userName';
+    var groupName = '@Model.groupName';
+    var currentUser = '@ViewBag.userName';
+</script>
