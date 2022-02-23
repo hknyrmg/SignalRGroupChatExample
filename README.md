@@ -1,2 +1,2 @@
 # SignalRGroupChat
-Group chat application using SignalR in .net Core
+Group chat and mutual drawing application using SignalR in .net Core
